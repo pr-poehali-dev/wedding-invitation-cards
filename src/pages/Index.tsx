@@ -47,28 +47,11 @@ const Index = () => {
             <div className="absolute bottom-4 right-4 w-16 h-16 border-b border-r border-[#8a8178] opacity-20"></div>
             
             {/* Монограмма */}
-            <div className="mb-8 relative">
-              <div className="text-8xl font-cinzel text-[#3a3a3a] font-semibold tracking-tight leading-none">
-                R<span className="text-7xl mx-1">&</span>K
-              </div>
-              <div className="font-script text-3xl text-[#3a3a3a] mt-3 opacity-60">
-                Роберт и Кристина
+            <div className="py-12 relative">
+              <div className="text-9xl font-cinzel text-[#3a3a3a] font-semibold tracking-tight leading-none">
+                R<span className="text-8xl mx-2">&</span>K
               </div>
             </div>
-
-            <Separator className="w-32 mx-auto bg-[#8a8178] opacity-30 mb-8" />
-
-            <h2 className="font-tenor text-sm uppercase tracking-[0.35em] text-[#3a3a3a] mb-6 opacity-80">
-              Дорогие гости!
-            </h2>
-            
-            <h1 className="font-cinzel text-5xl leading-tight tracking-[0.2em] text-[#3a3a3a] mb-2">
-              РОБЕРТ
-            </h1>
-            <div className="text-[#3a3a3a] text-5xl font-light my-3">&</div>
-            <h1 className="font-cinzel text-5xl leading-tight tracking-[0.2em] text-[#3a3a3a]">
-              КРИСТИНА
-            </h1>
           </div>
 
           {/* Нижняя темная секция */}
