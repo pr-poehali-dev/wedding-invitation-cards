@@ -20,7 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				cinzel: ['Cinzel', 'serif'],
-				tenor: ['Tenor Sans', 'sans-serif']
+				tenor: ['Tenor Sans', 'sans-serif'],
+				script: ['Great Vibes', 'cursive']
 			},
 			colors: {
 				border: 'hsl(var(--border))',
