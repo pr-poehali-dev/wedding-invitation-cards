@@ -39,28 +39,34 @@ const Index = () => {
       <div className="w-full max-w-md mx-4 space-y-6">
         <div className="bg-background overflow-hidden shadow-xl">
           {/* Верхняя светлая секция с монограммой */}
-          <div className="bg-[#e8e3da] px-8 pt-12 pb-10 text-center relative">
+          <div className="bg-[#e8e3da] px-8 pt-16 pb-12 text-center relative">
+            {/* Декоративные уголки */}
+            <div className="absolute top-4 left-4 w-16 h-16 border-t border-l border-[#8a8178] opacity-20"></div>
+            <div className="absolute top-4 right-4 w-16 h-16 border-t border-r border-[#8a8178] opacity-20"></div>
+            <div className="absolute bottom-4 left-4 w-16 h-16 border-b border-l border-[#8a8178] opacity-20"></div>
+            <div className="absolute bottom-4 right-4 w-16 h-16 border-b border-r border-[#8a8178] opacity-20"></div>
+            
             {/* Монограмма */}
-            <div className="mb-6 relative">
-              <div className="text-7xl font-cinzel text-[#3a3a3a] font-semibold tracking-tight">
-                R<span className="text-6xl">&</span>K
+            <div className="mb-8 relative">
+              <div className="text-8xl font-cinzel text-[#3a3a3a] font-semibold tracking-tight leading-none">
+                R<span className="text-7xl mx-1">&</span>K
               </div>
-              <div className="font-script text-2xl text-[#3a3a3a] mt-2 opacity-70">
+              <div className="font-script text-3xl text-[#3a3a3a] mt-3 opacity-60">
                 Роберт и Кристина
               </div>
             </div>
 
-            <Separator className="w-24 mx-auto bg-[#8a8178] opacity-30 mb-6" />
+            <Separator className="w-32 mx-auto bg-[#8a8178] opacity-30 mb-8" />
 
-            <h2 className="font-tenor text-sm uppercase tracking-[0.3em] text-[#3a3a3a] mb-4">
+            <h2 className="font-tenor text-sm uppercase tracking-[0.35em] text-[#3a3a3a] mb-6 opacity-80">
               Дорогие гости!
             </h2>
             
-            <h1 className="font-cinzel text-[2.75rem] leading-tight tracking-[0.15em] text-[#3a3a3a]">
+            <h1 className="font-cinzel text-5xl leading-tight tracking-[0.2em] text-[#3a3a3a] mb-2">
               РОБЕРТ
             </h1>
-            <div className="text-[#3a3a3a] text-4xl font-light my-2">&</div>
-            <h1 className="font-cinzel text-[2.75rem] leading-tight tracking-[0.15em] text-[#3a3a3a]">
+            <div className="text-[#3a3a3a] text-5xl font-light my-3">&</div>
+            <h1 className="font-cinzel text-5xl leading-tight tracking-[0.2em] text-[#3a3a3a]">
               КРИСТИНА
             </h1>
           </div>
@@ -94,19 +100,23 @@ const Index = () => {
                 </p>
               </div>
 
-              <p className="text-[#d4cfc7] italic pt-2">
-                С любовью,<br />
-                Роберт и Кристина
-              </p>
+
             </div>
           </div>
         </div>
 
         {/* Карточка с обратным отсчетом */}
-        <Card className="bg-[#e8e3da] border-none shadow-lg p-6">
-          <h3 className="font-cinzel text-xl text-center text-[#3a3a3a] mb-4 tracking-wide">
-            До праздника осталось
-          </h3>
+        <Card className="bg-[#e8e3da] border-none shadow-xl p-8 relative overflow-hidden">
+          <div className="absolute top-2 left-2 w-12 h-12 border-t border-l border-[#8a8178] opacity-15"></div>
+          <div className="absolute bottom-2 right-2 w-12 h-12 border-b border-r border-[#8a8178] opacity-15"></div>
+          
+          <div className="text-center mb-6">
+            <Icon name="Clock" size={28} className="text-[#8a8178] mx-auto mb-3 opacity-70" />
+            <h3 className="font-cinzel text-2xl text-[#3a3a3a] tracking-wide">
+              До праздника
+            </h3>
+          </div>
+          
           <div className="grid grid-cols-4 gap-3">
             {[
               { value: countdown.days, label: "дней" },
@@ -115,12 +125,12 @@ const Index = () => {
               { value: countdown.seconds, label: "секунд" },
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="bg-[#8a8178] rounded-lg p-3 mb-2">
-                  <span className="font-tenor text-2xl text-[#e8e3da] font-medium">
+                <div className="bg-[#8a8178] rounded-md p-4 mb-2 shadow-sm">
+                  <span className="font-tenor text-3xl text-[#e8e3da] font-semibold">
                     {String(item.value).padStart(2, "0")}
                   </span>
                 </div>
-                <span className="font-tenor text-xs text-[#3a3a3a] uppercase tracking-wider">
+                <span className="font-tenor text-[10px] text-[#3a3a3a] uppercase tracking-widest opacity-70">
                   {item.label}
                 </span>
               </div>
@@ -129,34 +139,39 @@ const Index = () => {
         </Card>
 
         {/* Карточка с картой */}
-        <Card className="bg-[#e8e3da] border-none shadow-lg p-6">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Icon name="MapPin" size={20} className="text-[#8a8178]" />
-            <h3 className="font-cinzel text-lg text-[#3a3a3a] tracking-wide">
+        <Card className="bg-[#e8e3da] border-none shadow-xl p-8 relative overflow-hidden">
+          <div className="absolute top-2 left-2 w-12 h-12 border-t border-l border-[#8a8178] opacity-15"></div>
+          <div className="absolute bottom-2 right-2 w-12 h-12 border-b border-r border-[#8a8178] opacity-15"></div>
+          
+          <div className="text-center mb-6">
+            <Icon name="MapPin" size={28} className="text-[#8a8178] mx-auto mb-3 opacity-70" />
+            <h3 className="font-cinzel text-2xl text-[#3a3a3a] tracking-wide mb-4">
               Место проведения
             </h3>
+            <p className="font-tenor text-base text-[#3a3a3a] opacity-80">
+              Кафе «Три берёзы»<br />
+              Усатого Балка, ул. Маяковского, 2е
+            </p>
           </div>
-          <p className="font-tenor text-sm text-center text-[#3a3a3a] mb-4">
-            Кафе «Три берёзы»<br />
-            Усатого Балка, ул. Маяковского, 2е
-          </p>
-          <div className="rounded-lg overflow-hidden">
+          
+          <div className="rounded-md overflow-hidden shadow-md mb-5">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?ll=37.617635,55.755814&z=16&l=map&pt=37.617635,55.755814,pm2rdm"
+              src="https://yandex.ru/map-widget/v1/?ll=37.424600,44.897675&z=16&l=map&pt=37.424600,44.897675,pm2rdm"
               width="100%"
-              height="300"
+              height="320"
               frameBorder="0"
               className="w-full"
               title="Карта проезда"
             />
           </div>
+          
           <a
-            href="https://yandex.ru/maps/?text=Усатого Балка, ул. Маяковского, 2е"
+            href="https://yandex.ru/maps/?ll=37.424600,44.897675&z=16&pt=37.424600,44.897675"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 block text-center"
+            className="block"
           >
-            <button className="bg-[#8a8178] text-[#e8e3da] font-tenor text-sm px-6 py-3 rounded-lg hover:bg-[#756b64] transition-colors w-full">
+            <button className="bg-[#8a8178] text-[#e8e3da] font-tenor text-sm px-8 py-4 rounded-md hover:bg-[#756b64] transition-all duration-300 w-full shadow-md hover:shadow-lg uppercase tracking-wider">
               Открыть в Яндекс.Картах
             </button>
           </a>
