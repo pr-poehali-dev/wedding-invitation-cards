@@ -43,7 +43,7 @@ const Index = () => {
             {/* Монограмма */}
             <div className="mb-6 relative">
               <div className="text-7xl font-cinzel text-[#3a3a3a] font-semibold tracking-tight">
-                R<span className="text-6xl">&</span>C
+                R<span className="text-6xl">&</span>K
               </div>
               <div className="font-script text-2xl text-[#3a3a3a] mt-2 opacity-70">
                 Роберт и Кристина
