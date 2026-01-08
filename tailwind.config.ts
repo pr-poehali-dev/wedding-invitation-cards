@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				cormorant: ['Cormorant Garamond', 'serif'],
-				montserrat: ['Montserrat', 'sans-serif']
+				cinzel: ['Cinzel', 'serif'],
+				tenor: ['Tenor Sans', 'sans-serif']
 			},
 			colors: {
 				border: 'hsl(var(--border))',
